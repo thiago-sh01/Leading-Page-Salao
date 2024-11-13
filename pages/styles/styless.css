@@ -18,7 +18,7 @@ header {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.logo {
+.logoHeader {
   cursor: pointer;
 
   width: 100px;
@@ -26,7 +26,7 @@ header {
   margin: 20px 30px;
 }
 
-.ul {
+.ulHeader {
   display: flex;
   list-style-type: none;
 
@@ -34,7 +34,7 @@ header {
   gap: 20px;
 }
 
-.ul li {
+.ulHeader li {
   font-size: larger;
   font: optional;
   cursor: pointer;
@@ -44,17 +44,22 @@ header {
   transition: text-shadow 0.2s ease;
 }
 
-.ul li:hover {
+.ulHeader li:hover {
   text-shadow: 0 0 15px #ffd700, 0 0 20px #ffd700, 0 0 25px #ffd700;
 }
 
+
+
+
+
+
 @media (max-width: 768px) {
-  .logo {
+  .logoHeader {
     width: 70px;
     margin: 10px 0;
   }
 
-  .ul {
+  .ulHeader {
     width: 100%;
     align-items: flex-start;
     margin-left: 150px;
@@ -67,18 +72,18 @@ header {
     padding: 10px;
   }
 
-  .logo {
+  .logoHeader {
     width: 60px;
     margin-left: 20px;
   }
 
-  .ul {
+  .ulHeader {
     margin-left: calc(230px - 150px);
 
     gap: 20px;
   }
 
-  .ul li {
+  .ulHeader li {
     font-size: medium;
   }
 }
