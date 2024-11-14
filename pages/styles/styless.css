@@ -124,7 +124,6 @@ main {
   transform: translateY(0);
 }
 
-/* Estilos para o popup */
 .popup {
   position: fixed;
   top: 0;
