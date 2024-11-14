@@ -12,7 +12,18 @@ function loadHTML(file, elementId) {
         .catch(error => console.error(error));
 }
 
-// Carrega os arquivos
 loadHTML('/pages/header.html', 'header');
 loadHTML('/pages/main.html', 'main');
 loadHTML('/pages/footer.html', 'footer');
+
+window.addEventListener('load', function() {
+    document.querySelector('.content').classList.add('active');
+});
+
+function mostrarMensagem() {
+    document.getElementById("popup").classList.add("active");
+}
+
+function fecharMensagem() {
+    document.getElementById("popup").classList.remove("active");
+}

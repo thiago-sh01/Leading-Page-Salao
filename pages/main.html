@@ -1,8 +1,20 @@
 <main>
-  <section class="banner">
-    <h1>Realce sua beleza natural</h1>
-    <button>Agende agora</button>
-  </section>
+    <section class="banner">
+        <div class="overlay"></div>
+        <div class="content animated">
+            <h1>Transforme sua Beleza</h1>
+            <p>Experimente o melhor em cuidados e estilo para seu cabelo e sua pele.</p>
+            <button onclick="mostrarMensagem()">Agende agora</button>
+        </div>
+    </section>
+
+    <div class="popup" id="popup">
+      <div class="popup-content">
+          <span class="close" onclick="fecharMensagem()">&times;</span>
+          <h2>Obrigado pelo interesse!</h2>
+          <p>Estamos animados para ajudá-la a marcar seu horário e proporcionar uma experiência única de beleza.</p>
+      </div>
+  </div>
 
   <!-- Serviços -->
   <section class="servicos">
