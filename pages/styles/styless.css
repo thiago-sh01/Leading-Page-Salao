@@ -10,12 +10,11 @@ header {
   align-items: center;
 
   background-color: black;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 
-  position: fixed;
   width: 100%;
   color: white;
   z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .logoHeader {
@@ -48,10 +47,16 @@ header {
   text-shadow: 0 0 15px #ffd700, 0 0 20px #ffd700, 0 0 25px #ffd700;
 }
 
+main {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)),
+    url("/assets/images/picture-backgroud.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow-x: hidden;
 
-
-
-
+  min-height: 100vh;
+}
 
 @media (max-width: 768px) {
   .logoHeader {
