@@ -52,7 +52,7 @@ main {
     url("/assets/images/picture-backgroud.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center 20%;
   overflow-x: hidden;
 
   min-height: 100vh;
