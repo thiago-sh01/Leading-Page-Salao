@@ -22,14 +22,6 @@ window.addEventListener("load", function () {
 
 function mostrarFormulario() {
   document.getElementById("popupFormulario").classList.add("active");
-}
-
-function fecharFormulario() {
-  document.getElementById("popupFormulario").classList.remove("active");
-}
-
-function mostrarFormulario() {
-  document.getElementById("popupFormulario").classList.add("active");
 
   const dataInput = document.getElementById("data");
   const hoje = new Date();
@@ -38,4 +30,45 @@ function mostrarFormulario() {
   const dia = String(hoje.getDate()).padStart(2, "0");
 
   dataInput.min = `${ano}-${mes}-${dia}`;
+
+  const telefoneInput = document.getElementById("telefone");
+  telefoneInput.addEventListener("input", formatarTelefone);
+}
+
+function formatarTelefone(event) {
+  let telefone = event.target.value.replace(/\D/g, "");
+
+  if (telefone.length > 11) {
+    telefone = telefone.slice(0, 11);
+  }
+
+  if (telefone.length <= 2) {
+    telefone = `(${telefone}`;
+  } else if (telefone.length <= 7) {
+    telefone = `(${telefone.slice(0, 2)}) ${telefone.slice(2)}`;
+  } else {
+    telefone = `(${telefone.slice(0, 2)}) ${telefone.slice(
+      2,
+      7
+    )}-${telefone.slice(7)}`;
+  }
+
+  event.target.value = telefone;
+}
+
+function validarFormulario() {
+  const telefone = document.getElementById("telefone").value.replace(/\D/g, "");
+  const nome = document.getElementById("nome").value.trim();
+
+  if (telefone.length !== 11) {
+    alert("O número de telefone deve conter exatamente 11 dígitos.");
+    return false;
+  }
+
+  alert(`Parabéns ${nome} seu Agendamento foi Realizado com Sucesso`);
+  return true;
+}
+
+function fecharFormulario() {
+  document.getElementById("popupFormulario").classList.remove("active");
 }
