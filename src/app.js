@@ -5,7 +5,7 @@ const { Client } = require("pg");
 require("dotenv").config();
 
 const app = express();
-const port = 5432;
+const port = 5433;
 
 app.use(bodyParser.json());
 
@@ -20,9 +20,7 @@ const client = new Client({
 client
   .connect()
   .then(() => console.log("Conectado ao banco de dados"))
-  .catch((err) =>
-    console.error("Erro ao conectar ao banco de dados", err.stack)
-  );
+  .catch((err) => console.error("Erro ao conectar ao banco de dados:", err));
 
 app.post("/agendar", (req, res) => {
   const { nome, telefone, data, hora } = req.body;
