@@ -60,6 +60,12 @@ function validarFormulario() {
   const telefone = document.getElementById("telefone").value.replace(/\D/g, "");
   const nome = document.getElementById("nome").value.trim();
 
+  const nomeValido = /^[A-Za-zÀ-ÿ\s]+$/.test(nome);
+  if (!nomeValido) {
+    alert("O nome deve conter apenas letras");
+    return false;
+  }
+
   if (telefone.length !== 11) {
     alert("O número de telefone deve conter exatamente 11 dígitos.");
     return false;
