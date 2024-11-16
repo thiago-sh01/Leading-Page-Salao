@@ -32,7 +32,7 @@ A landing page serve como um cartão de visita digital para o salão, dando às 
 ## 🛠 Tecnologias Utilizadas
 
 - HTML, CSS, JavaScript
-- [Possível Integração com Backend para Agendamento]
+- Node.Js, PostgreSQL, API [Possível Integração com Backend para Agendamento]
 
 ---
 
