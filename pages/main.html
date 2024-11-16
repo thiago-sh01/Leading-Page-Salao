@@ -3,7 +3,7 @@
     <div class="overlay"></div>
     <div class="content animated">
       <h1>Transforme sua Beleza</h1>
-      <p> 
+      <p>
         Experimente o melhor em cuidados e estilo para seu cabelo e sua pele.
       </p>
       <button onclick="mostrarFormulario()">Agende agora</button>
@@ -37,10 +37,48 @@
       </form>
     </div>
   </div>
-  
+
   <!-- Serviços -->
   <section class="servicos">
     <h2>Nossos Serviços</h2>
+
+    <!-- Carrossel de Serviços -->
+    <div class="carrossel">
+      <div class="slides">
+        <div class="slide">
+          <img src="cabeleireira1.jpg" alt="Serviço de Cabeleireira" />
+          <p>Corte Feminino - R$50</p>
+        </div>
+        <div class="slide">
+          <img src="cabeleireira2.jpg" alt="Serviço de Cabeleireira" />
+          <p>Escova Progressiva - R$150</p>
+        </div>
+        <div class="slide">
+          <img src="manicure1.jpg" alt="Serviço de Manicure" />
+          <p>Manicure - R$30</p>
+        </div>
+        <div class="slide">
+          <img src="pedicure1.jpg" alt="Serviço de Pedicure" />
+          <p>Pedicure - R$40</p>
+        </div>
+      </div>
+      <button class="prev" onclick="mudarSlide(-1)">&#10094;</button>
+      <button class="next" onclick="mudarSlide(1)">&#10095;</button>
+    </div>
+
+    <!-- Combos -->
+    <div class="combos">
+      <h3>Combos com Desconto</h3>
+      <ul>
+        <li>
+          Corte + Escova Progressiva: <strong>R$180</strong> (Economize R$20)
+        </li>
+        <li>Manicure + Pedicure: <strong>R$60</strong> (Economize R$10)</li>
+        <li>
+          Corte + Manicure + Pedicure: <strong>R$120</strong> (Economize R$20)
+        </li>
+      </ul>
+    </div>
   </section>
 
   <!-- Depoimentos -->
