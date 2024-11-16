@@ -2,9 +2,9 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const agendamentosRoutes = require("./routes/agendamentos");
 
-require("dotenv").config();
-
 const app = express();
+
+require("dotenv").config();
 
 app.use(bodyParser.json());
 
