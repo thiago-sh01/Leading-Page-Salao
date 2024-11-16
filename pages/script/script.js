@@ -1,5 +1,5 @@
 function loadHTML(file, elementId) {
-  fetch(file) 
+  fetch(file)
     .then((response) => {
       if (!response.ok) {
         throw new Error(`Erro ao carregar ${file}: ${response.status}`);
@@ -78,3 +78,23 @@ function validarFormulario() {
 function fecharFormulario() {
   document.getElementById("popupFormulario").classList.remove("active");
 }
+
+let slideIndex = 0;
+
+function mudarSlide(n) {
+  const slides = document.querySelectorAll(".slide");
+  slideIndex += n;
+
+  if (slideIndex < 0) {
+    slideIndex = slides.length - 1;
+  } else if (slideIndex >= slides.length) {
+    slideIndex = 0; 
+  }
+
+  const offset = -slideIndex * 100;
+  document.querySelector(".slides").style.transform = `translateX(${offset}%)`;
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  mudarSlide(0);
+});
