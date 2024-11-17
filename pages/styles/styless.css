@@ -239,37 +239,37 @@ main {
 
 .carrossel {
   position: relative;
-
+ 
   max-width: 600px;
   margin: 0 auto;
-
+ 
   overflow: hidden;
-
+ 
   border: 1px solid #ddd;
   border-radius: 8px;
 }
 
 .slides {
   display: flex;
-
+ 
   transition: transform 0.5s ease-in-out;
 }
 
 .slide {
   min-width: 100%;
-
+ 
   text-align: center;
 }
 
 .slide img {
   width: 100%;
-
+ 
   border-radius: 8px;
 }
 
 .slide p {
   margin: 10px 0;
-
+ 
   font-weight: bold;
 }
 
@@ -280,12 +280,17 @@ button.next {
 
   padding: 10px;
   top: 50%;
-
+  
   transform: translateY(-50%);
   border: none;
-
+  
   color: white;
   background-color: rgba(0, 0, 0, 0.5);
+}
+
+button.prev:hover,
+button.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 button.prev {
@@ -296,10 +301,6 @@ button.next {
   right: 10px;
 }
 
-button.prev:hover,
-button.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
 
 .combos {
   margin-top: 30px;
@@ -311,13 +312,13 @@ button.next:hover {
 
 .combos ul {
   list-style: none;
-
+  
   padding: 0;
 }
 
 .combos li {
   margin: 10px 0;
-
+  
   font-size: 16px;
 }
 
