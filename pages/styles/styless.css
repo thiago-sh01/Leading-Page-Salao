@@ -278,30 +278,23 @@ button.next {
   position: absolute;
   cursor: pointer;
 
-  padding: 10px;
+  width: 50px;
+  height: 50px;
+  padding: 0;
   top: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   transform: translateY(-50%);
   border: none;
 
   color: white;
   background-color: rgba(0, 0, 0, 0.5);
-}
+  font-size: 24px;
 
-button.prev,
-button.next {
-  position: absolute;
-  cursor: pointer;
-
-  padding: 10px;
-  top: 50%;
-
-  transform: translateY(-50%);
-  border: none;
-
-  color: white;
-  background-color: rgba(0, 0, 0, 0.5);
-  font-size: 24px; /* Tamanho dos ícones */
+  border-radius: 50%;
 }
 
 button.prev:hover,
