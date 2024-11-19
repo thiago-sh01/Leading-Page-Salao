@@ -41,7 +41,7 @@
   <section class="servicos">
     <h2>Nossos Serviços</h2>
 
-    <div class="carrossel">
+    <div class="carrossel cabeleireira">
       <div class="slides">
         <div class="slide">
           <img src="cabeleireira1.jpg" alt="Serviço de Cabeleireira" />
@@ -60,21 +60,34 @@
           <p>Escova Progressiva - R$150</p>
         </div>
         <div class="slide">
-          <img src="manicure1.jpg" alt="Serviço de Manicure" />
-          <p>Manicure - R$30</p>
-        </div>
-        <div class="slide">
-          <img src="pedicure1.jpg" alt="Serviço de Pedicure" />
-          <p>Pedicure - R$40</p>
+          <img src="cabeleireira1.jpg" alt="Serviço de Cabeleireira" />
+          <p>Tratamento Capilar - R$50</p>
         </div>
       </div>
 
-      <button class="prev" onclick="mudarSlide(-1)">
+      <button class="prev" onclick="mudarSlide(-1, 'cabeleireira')">
         <i class="fa-solid fa-chevron-left"></i>
       </button>
-      <button class="next" onclick="mudarSlide(1)">
+      <button class="next" onclick="mudarSlide(1, 'cabeleireira')">
         <i class="fa-solid fa-chevron-right"></i>
       </button>
+    </div>
+
+    <h2>Serviços de Manicure</h2>
+    <div class="carrossel manicure">
+      <div class="slides">
+        <div class="slide">
+          <img src="manicure1.jpg" alt="Manicure" />
+          <p>Manicure - R$30</p>
+        </div>
+        <div class="slide">
+          <img src="manicure2.jpg" alt="Pedicure" />
+          <p>Pedicure - R$40</p>
+        </div>
+        <!-- Adicione mais slides conforme necessário -->
+      </div>
+      <button class="prev" onclick="mudarSlide(-1, 'manicure')">❮</button>
+      <button class="next" onclick="mudarSlide(1, 'manicure')">❯</button>
     </div>
 
     <div class="combos">
