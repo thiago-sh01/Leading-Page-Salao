@@ -230,11 +230,11 @@ main {
 
   padding: 40px;
   margin-top: 80px;
-
 }
 
 .servicos h2 {
   margin-bottom: 20px;
+  padding: 20px;
 }
 
 .carrossel {
@@ -259,15 +259,17 @@ main {
   min-width: 100%;
   padding: 20px;
 
-  box-sizing: border-box;
-
   text-align: center;
+
+  box-sizing: border-box;
 }
 
 .slide img {
   width: 200px;
 
   border-radius: 8px;
+
+  cursor: pointer;
 }
 
 .slide p {
