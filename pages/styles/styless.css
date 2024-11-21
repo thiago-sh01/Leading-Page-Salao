@@ -257,6 +257,7 @@ main {
 
 .slide {
   min-width: 100%;
+  padding: 20px;
 
   box-sizing: border-box;
 
@@ -264,7 +265,7 @@ main {
 }
 
 .slide img {
-  width: 100%;
+  width: 200px;
 
   border-radius: 8px;
 }
