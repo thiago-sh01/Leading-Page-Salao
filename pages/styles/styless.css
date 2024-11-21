@@ -224,6 +224,117 @@ main {
   visibility: visible;
 }
 
+.servicos {
+  text-align: center;
+  align-items: center;
+
+  padding: 40px;
+  margin-top: 80px;
+}
+
+.servicos h2 {
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.carrossel {
+  position: relative;
+
+  max-width: 600px;
+  margin: 0 auto;
+
+  overflow: hidden;
+
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.slides {
+  display: flex;
+
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  padding: 20px;
+
+  text-align: center;
+
+  box-sizing: border-box;
+}
+
+.slide img {
+  width: 200px;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+}
+
+.slide p {
+  margin: 10px 0;
+
+  font-weight: bold;
+}
+
+button.prev,
+button.next {
+  position: absolute;
+  cursor: pointer;
+
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  top: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transform: translateY(-50%);
+  border: none;
+
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 24px;
+
+  border-radius: 50%;
+  z-index: 10;
+}
+
+button.prev:hover,
+button.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+button.prev {
+  left: 10px;
+}
+
+button.next {
+  right: 10px;
+}
+
+.combos {
+  margin-top: 30px;
+}
+
+.combos h3 {
+  margin-bottom: 10px;
+}
+
+.combos ul {
+  list-style: none;
+
+  padding: 0;
+}
+
+.combos li {
+  margin: 10px 0;
+
+  font-size: 16px;
+}
 
 @media (max-width: 768px) {
   .logoHeader {

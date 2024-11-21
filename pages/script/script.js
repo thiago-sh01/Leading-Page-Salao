@@ -15,7 +15,6 @@ function loadHTML(file, elementId) {
 loadHTML("/pages/header.html", "header");
 loadHTML("/pages/main.html", "main");
 loadHTML("/pages/footer.html", "footer");
-loadHTML("/pages/servicos.html", "section")
 
 window.addEventListener("load", function () {
   document.querySelector(".content").classList.add("active");
@@ -24,6 +23,11 @@ window.addEventListener("load", function () {
 function irParaServicos(){
   window.location.href = "/pages/servicos.html";
 }
+
+function irParaHome(){
+  window.location.href = "../../index.html";
+}
+
 
 function mostrarFormulario() {
   document.getElementById("popupFormulario").classList.add("active");
