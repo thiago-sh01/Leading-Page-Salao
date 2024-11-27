@@ -419,6 +419,7 @@ button.next {
 .carrinho li {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   margin-bottom: 10px;
 
@@ -453,6 +454,41 @@ button.next {
 
 .carrinho button:hover {
   background-color: #c5303b;
+}
+
+.carrinho li button {
+  background-color: #e63946;
+  color: white;
+
+  border: none;
+  border-radius: 4px;
+
+  cursor: pointer;
+
+  font-size: 14px;
+  padding: 5px 10px;
+}
+
+.carrinho li button:hover {
+  background-color: #c5303b;
+}
+
+.fechar-carrinho {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  background-color: transparent;
+  color: #e63946;
+
+  border: none;
+  font-size: 20px;
+
+  cursor: pointer;
+}
+
+.fechar-carrinho:hover {
+  color: #c5303b;
 }
 
 @media (max-width: 768px) {

@@ -148,13 +148,30 @@ function atualizarCarrinho() {
 
   carrinho.forEach((item) => {
     const li = document.createElement("li");
+
     li.textContent = `${item.nome} - R$${item.preco.toFixed(2)}`;
+
+    const botaoRemover = document.createElement("button");
+    botaoRemover.textContent = "Remover";
+    botaoRemover.onclick = () => removerDoCarrinho(index);
+
+    li.appendChild(botaoRemover);
     carrinhoElemento.appendChild(li);
   });
 
   totalElemento.textContent = `R$${total.toFixed(2)}`;
-
   carrinhoConteiner.style.display = "block";
+}
+
+function removerDoCarrinho(index) {
+  total -= carrinho[index].preco;
+  carrinho.splice(index, 1);
+
+  atualizarCarrinho();
+
+  if (carrinho.length === 0) {
+    document.getElementById("carrinho").style.display = "none";
+  }
 }
 
 function finalizarCompra() {
@@ -168,5 +185,9 @@ function finalizarCompra() {
   total = 0;
   atualizarCarrinho();
 
+  document.getElementById("carrinho").style.display = "none";
+}
+
+function fecharCarrinho() {
   document.getElementById("carrinho").style.display = "none";
 }
