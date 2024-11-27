@@ -20,14 +20,13 @@ window.addEventListener("load", function () {
   document.querySelector(".content").classList.add("active");
 });
 
-function irParaServicos(){
+function irParaServicos() {
   window.location.href = "/pages/servicos.html";
 }
 
-function irParaHome(){
+function irParaHome() {
   window.location.href = "../../index.html";
 }
-
 
 function mostrarFormulario() {
   document.getElementById("popupFormulario").classList.add("active");
@@ -129,3 +128,45 @@ document.addEventListener("DOMContentLoaded", () => {
   mudarSlide(0, "cabeleireira");
   mudarSlide(0, "manicure");
 });
+
+let carrinho = [];
+let total = 0;
+
+function adicionarAoCarrinho(nome, preco) {
+  // Atualizar o carrinho
+  carrinho.push({ nome, preco });
+  total += preco;
+
+  // Atualizar a interface
+  atualizarCarrinho();
+}
+
+function atualizarCarrinho() {
+  const carrinhoElemento = document.getElementById("itens-carrinho");
+  const totalElemento = document.getElementById("total-carrinho");
+
+  // Limpar itens anteriores
+  carrinhoElemento.innerHTML = "";
+
+  // Adicionar itens ao carrinho
+  carrinho.forEach((item) => {
+    const li = document.createElement("li");
+    li.textContent = `${item.nome} - R$${item.preco.toFixed(2)}`;
+    carrinhoElemento.appendChild(li);
+  });
+
+  // Atualizar total
+  totalElemento.textContent = `R$${total.toFixed(2)}`;
+
+  // Exibir o carrinho
+  document.querySelector(".carrinho").style.display = "block";
+}
+
+function finalizarCompra() {
+  alert(`Compra finalizada! Total: R$${total.toFixed(2)}`);
+  // Resetar o carrinho
+  carrinho = [];
+  total = 0;
+  atualizarCarrinho();
+  document.querySelector(".carrinho").style.display = "none";
+}

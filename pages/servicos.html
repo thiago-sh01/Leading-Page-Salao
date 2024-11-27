@@ -1,4 +1,10 @@
 <link rel="stylesheet" href="../pages/styles/styless.css" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+/>
+
+
 
 <header>
     <img class="logoHeader" src="/assets/images/logo.jpg" alt="Logo do salão" />
@@ -7,6 +13,9 @@
       <li onclick="irParaHome()">Home</li>
       <li onclick="mostrarFormulario()">Agendamentos</li>
     </ul> 
+    <!-- <i class="fas fa-shopping-cart"></i> -->
+<!-- Icone do carrinho -->
+
   </header>  
 
 <section class="servicos">
@@ -73,14 +82,23 @@
   <div class="combos">
     <h3>Combos com Desconto</h3>
     <ul>
-      <li>
+      <li onclick="adicionarAoCarrinho('Corte + Escova Progressiva', 180)">
         Corte + Escova Progressiva: <strong>R$180</strong> (Economize R$20)
-      </li>
+      </li onclick="adicionarAoCarrinho('Manicure + Pedicure', 60)">
       <li>Manicure + Pedicure: <strong>R$60</strong> (Economize R$10)</li>
-      <li>
+      <li onclick="adicionarAoCarrinho('Corte + Manicure + Pedicure', 120)">
         Corte + Manicure + Pedicure: <strong>R$120</strong> (Economize R$20)
       </li>
     </ul>
+  </div>
+
+  <div class="carrinho" id="carrinho">
+    <h3>Seu Carrinho</h3>
+    <ul id="itens-carrinho"></ul>
+    <div class="carrinho-total">
+      Total: <span id="total-carrinho">R$0</span>
+    </div>
+    <button onclick="finalizarCompra()">Finalizar Compra</button>
   </div>
 
   <script src="../pages/script/script.js"></script>

@@ -228,23 +228,25 @@ main {
   text-align: center;
   align-items: center;
 
+  min-height: 100vh;
+
   background-image: linear-gradient(
       rgba(255, 255, 255, 0.7),
       rgba(255, 255, 255, 0.7)
     ),
     url("/assets/images/picture-backgroud.jpg");
 
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center 20%;
-    overflow-x: hidden;
-  
-    min-height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 20%;
+  overflow-x: hidden;
 }
 
 .servicos h2 {
   margin-bottom: 20px;
   padding: 20px;
+
+  font-weight: 700;
 }
 
 .carrossel {
@@ -326,7 +328,7 @@ button.next {
   right: 10px;
 }
 
-.combos {
+/* .combos {
   margin-top: 30px;
 }
 
@@ -344,6 +346,107 @@ button.next {
   margin: 10px 0;
 
   font-size: 16px;
+} */
+
+.combos {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.combos h3 {
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}
+
+.combos ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.combos li {
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 16px;
+  color: #555;
+  cursor: pointer;
+  background-color: #fff;
+  border: 1pc solid #ddd;
+  border-radius: 4px;
+  transition: backgound-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.combos li strong {
+  color: #e63946;
+  font-weight: bold;
+}
+
+.combos li:hover {
+  background-color: #f0f0f0;
+  box-shadow: 0 2px 4px rga(0, 0, 0, 0.1);
+}
+
+.carrinho {
+  position: fixed;
+  top: 10%;
+  right: 20px;
+  width: 300px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: none; /* Escondido inicialmente */
+}
+
+.carrinho h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.carrinho ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 15px;
+}
+
+.carrinho li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.carrinho-total {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: right;
+  margin-top: 10px;
+}
+
+.carrinho button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #e63946;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.carrinho button:hover {
+  background-color: #c5303b;
 }
 
 @media (max-width: 768px) {
