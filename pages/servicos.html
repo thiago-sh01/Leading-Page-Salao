@@ -4,19 +4,16 @@
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
 />
 
-
-
 <header>
-    <img class="logoHeader" src="/assets/images/logo.jpg" alt="Logo do salão" />
-  
-    <ul class="ulHeader">
-      <li onclick="irParaHome()">Home</li>
-      <li onclick="mostrarFormulario()">Agendamentos</li>
-    </ul> 
-    <!-- <i class="fas fa-shopping-cart"></i> -->
-<!-- Icone do carrinho -->
+  <img class="logoHeader" src="/assets/images/logo.jpg" alt="Logo do salão" />
 
-  </header>  
+  <ul class="ulHeader">
+    <li onclick="irParaHome()">Home</li>
+    <li onclick="mostrarFormulario()">Agendamentos</li>
+  </ul>
+  <!-- <i class="fas fa-shopping-cart"></i> -->
+  <!-- Icone do carrinho -->
+</header>
 
 <section class="servicos">
   <h2>Serviços de Cabeleireira</h2>
@@ -27,6 +24,7 @@
         <img
           src="../assets/images/cabeleireira.png"
           alt="Serviço de Cabeleireira"
+          onclick="adicionarAoCarrinho('Corte Feminino',50)"
         />
         <p>Corte Feminino - R$50</p>
       </div>
@@ -34,6 +32,7 @@
         <img
           src="../assets/images/cabeleireira.png"
           alt="Serviço de Cabeleireira"
+          onclick="adicionarAoCarrinho('Escova',50)"
         />
         <p>Escova - R$50</p>
       </div>
@@ -41,6 +40,7 @@
         <img
           src="../assets/images/cabeleireira.png"
           alt="Serviço de Cabeleireira"
+          onclick="adicionarAoCarrinho('Hidratação',50)"
         />
         <p>Hidratação - R$50</p>
       </div>
@@ -48,6 +48,7 @@
         <img
           src="../assets/images/cabeleireira.png"
           alt="Serviço de Cabeleireira"
+          onclick="adicionarAoCarrinho('Escova Progressiva',150)"
         />
         <p>Escova Progressiva - R$150</p>
       </div>
@@ -55,6 +56,7 @@
         <img
           src="../assets/images/cabeleireira.png"
           alt="Serviço de Cabeleireira"
+          onclick="adicionarAoCarrinho('Tratamento Capilar',50)"
         />
         <p>Tratamento Capilar - R$50</p>
       </div>
@@ -67,11 +69,19 @@
   <div class="carrossel manicure">
     <div class="slides">
       <div class="slide">
-        <img src="../assets/images/manicure.png" alt="Manicure" />
+        <img
+          src="../assets/images/manicure.png"
+          alt="Manicure"
+          onclick="adicionarAoCarrinho('Manicure',30)"
+        />
         <p>Manicure - R$30</p>
       </div>
       <div class="slide">
-        <img src="../assets/images/manicure.png" alt="Pedicure" />
+        <img
+          src="../assets/images/manicure.png"
+          alt="Pedicure"
+          onclick="adicionarAoCarrinho('Pedicure',40)"
+        />
         <p>Pedicure - R$40</p>
       </div>
     </div>
@@ -84,8 +94,10 @@
     <ul>
       <li onclick="adicionarAoCarrinho('Corte + Escova Progressiva', 180)">
         Corte + Escova Progressiva: <strong>R$180</strong> (Economize R$20)
-      </li onclick="adicionarAoCarrinho('Manicure + Pedicure', 60)">
-      <li>Manicure + Pedicure: <strong>R$60</strong> (Economize R$10)</li>
+      </li>
+      <li onclick="adicionarAoCarrinho('Manicure + Pedicure', 60)">
+        Manicure + Pedicure: <strong>R$60</strong> (Economize R$10)
+      </li>
       <li onclick="adicionarAoCarrinho('Corte + Manicure + Pedicure', 120)">
         Corte + Manicure + Pedicure: <strong>R$120</strong> (Economize R$20)
       </li>

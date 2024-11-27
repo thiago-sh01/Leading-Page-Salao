@@ -144,6 +144,7 @@ function adicionarAoCarrinho(nome, preco) {
 function atualizarCarrinho() {
   const carrinhoElemento = document.getElementById("itens-carrinho");
   const totalElemento = document.getElementById("total-carrinho");
+  const carrinhoConteiner = document.getElementById("carrinho");
 
   // Limpar itens anteriores
   carrinhoElemento.innerHTML = "";
@@ -159,14 +160,20 @@ function atualizarCarrinho() {
   totalElemento.textContent = `R$${total.toFixed(2)}`;
 
   // Exibir o carrinho
-  document.querySelector(".carrinho").style.display = "block";
+  carrinhoConteiner.style.display = "block";
 }
 
 function finalizarCompra() {
+  if (carrinho.length === 0) {
+    alert("Seu carrinho está vazio");
+    return;
+  }
+
   alert(`Compra finalizada! Total: R$${total.toFixed(2)}`);
   // Resetar o carrinho
   carrinho = [];
   total = 0;
   atualizarCarrinho();
-  document.querySelector(".carrinho").style.display = "none";
+
+  document.getElementById("carrinho").style.display = "none";
 }
