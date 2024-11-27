@@ -331,69 +331,87 @@ button.next {
 .combos {
   margin-top: 40px;
   padding: 20px;
+
   background-color: #f9f9f9;
   border: 1px solid #ddd;
+
   border-radius: 8px;
 }
 
 .combos h3 {
   margin-bottom: 20px;
   font-size: 20px;
-  font-weight: bold;
-  color: #333;
+
   text-align: center;
+
+  font-weight: bold;
+
+  color: #333;
 }
 
 .combos ul {
   list-style: none;
-  padding: 0;
   text-align: center;
+
+  padding: 0;
 }
 
 .combos li {
   margin: 10px 0;
   padding: 10px;
+
   font-size: 16px;
-  color: #555;
-  cursor: pointer;
+
   background-color: #fff;
   border: 1pc solid #ddd;
+  color: #555;
+
   border-radius: 4px;
+  cursor: pointer;
+
   transition: backgound-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .combos li strong {
-  color: #e63946;
   font-weight: bold;
+
+  color: #e63946;
 }
 
 .combos li:hover {
   background-color: #f0f0f0;
+
   box-shadow: 0 2px 4px rga(0, 0, 0, 0.1);
 }
 
 .carrinho {
   position: fixed;
+  display: none;
+
   top: 10%;
   right: 20px;
   width: 300px;
+  padding: 20px;
+
+  border-radius: 8px;
+
   background: #fff;
   border: 1px solid #ddd;
-  border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  display: none;
 }
 
 .carrinho h3 {
   margin-bottom: 15px;
   font-size: 18px;
+
   font-weight: bold;
+
   color: #333;
 }
 
 .carrinho ul {
   list-style: none;
+
   padding: 0;
   margin: 0 0 15px;
 }
@@ -401,26 +419,35 @@ button.next {
 .carrinho li {
   display: flex;
   justify-content: space-between;
+
   margin-bottom: 10px;
+
   font-size: 16px;
 }
 
 .carrinho-total {
   font-size: 18px;
   font-weight: bold;
+
   text-align: right;
+
   margin-top: 10px;
 }
 
 .carrinho button {
   display: block;
+
   width: 100%;
   padding: 10px;
+
   background-color: #e63946;
   color: white;
+
   border: none;
   border-radius: 4px;
+
   cursor: pointer;
+
   font-size: 16px;
 }
 

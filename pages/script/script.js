@@ -133,11 +133,9 @@ let carrinho = [];
 let total = 0;
 
 function adicionarAoCarrinho(nome, preco) {
-  // Atualizar o carrinho
   carrinho.push({ nome, preco });
   total += preco;
 
-  // Atualizar a interface
   atualizarCarrinho();
 }
 
@@ -146,20 +144,16 @@ function atualizarCarrinho() {
   const totalElemento = document.getElementById("total-carrinho");
   const carrinhoConteiner = document.getElementById("carrinho");
 
-  // Limpar itens anteriores
   carrinhoElemento.innerHTML = "";
 
-  // Adicionar itens ao carrinho
   carrinho.forEach((item) => {
     const li = document.createElement("li");
     li.textContent = `${item.nome} - R$${item.preco.toFixed(2)}`;
     carrinhoElemento.appendChild(li);
   });
 
-  // Atualizar total
   totalElemento.textContent = `R$${total.toFixed(2)}`;
 
-  // Exibir o carrinho
   carrinhoConteiner.style.display = "block";
 }
 
@@ -170,7 +164,6 @@ function finalizarCompra() {
   }
 
   alert(`Compra finalizada! Total: R$${total.toFixed(2)}`);
-  // Resetar o carrinho
   carrinho = [];
   total = 0;
   atualizarCarrinho();
