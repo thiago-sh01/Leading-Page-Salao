@@ -398,6 +398,9 @@ button.next {
   background: #fff;
   border: 1px solid #ddd;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  max-height: 80vh;
+  overflow: auto;
 }
 
 .carrinho h3 {
@@ -426,6 +429,18 @@ button.next {
   margin-bottom: 10px;
 
   font-size: 16px;
+
+  word-wrap: break-word;
+}
+
+.carrinho li span {
+  flex-grow: 1;
+
+  text-align: left;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .carrinho li button {
@@ -493,12 +508,6 @@ button.next {
 
 .fechar-carrinho:hover {
   color: #c5303b;
-}
-
-.carrinho li span {
-  flex-grow: 1;
-
-  text-align: left;
 }
 
 @media (max-width: 768px) {

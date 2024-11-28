@@ -132,6 +132,12 @@ document.addEventListener("DOMContentLoaded", () => {
 let carrinho = [];
 let total = 0;
 
+function reposicionarCarrinho() {
+  const carrinho = document.getElementById("carrinho");
+
+  carrinho.scrollTop = carrinho.scrollHeight;
+}
+
 function adicionarAoCarrinho(nome, preco) {
   const itemExistente = carrinho.find((item) => item.nome === nome);
 
@@ -171,6 +177,11 @@ function atualizarCarrinho() {
     li.appendChild(botaoDiminuir);
     carrinhoElemento.appendChild(li);
   });
+
+  document.getElementById("total-carrinho").textContent = `R$${total.toFixed(
+    2
+  )}`;
+  reposicionarCarrinho();
 
   totalElemento.textContent = `R$${total.toFixed(2)}`;
   carrinhoConteiner.style.display = carrinho.length > 0 ? "block" : "none";
