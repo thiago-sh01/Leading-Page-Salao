@@ -28,6 +28,29 @@ function irParaHome() {
   window.location.href = "../../index.html";
 }
 
+function iniciarCarrossel(carrosselId, intervalo) {
+  const carrossel = document.getElementById(carrosselId);
+  const items = carrossel.getElementsByClassName("carrossel-item");
+  let indiceAtual = 0;
+
+  // Mostrar o primeiro item
+  items[indiceAtual].classList.add("active");
+
+  setInterval(() => {
+    // Esconder o item atual
+    items[indiceAtual].classList.remove("active");
+
+    // Avançar para o próximo item
+    indiceAtual = (indiceAtual + 1) % items.length;
+
+    // Mostrar o próximo item
+    items[indiceAtual].classList.add("active");
+  }, intervalo);
+}
+
+iniciarCarrossel("carrosselCabeleireira", 5000); 
+iniciarCarrossel("carrosselManicure", 5000);
+
 let slideIndexCabeleireira = 0;
 let slideIndexManicure = 0;
 
