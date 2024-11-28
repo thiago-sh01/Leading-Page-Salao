@@ -104,6 +104,34 @@
     </ul>
   </div>
 
+  <div class="popup" id="popupFormulario">
+    <div class="popup-content">
+      <span class="close" onclick="fecharFormulario()">&times;</span>
+      <h2>Agende seu Horário</h2>
+      <form id="formulario" onsubmit="return validarFormulario()">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required />
+
+        <label for="telefone">Telefone:</label>
+        <input
+          type="tel"
+          id="telefone"
+          name="telefone"
+          placeholder="(00) 00000-0000"
+          required
+        />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="data">Data desejada:</label>
+        <input type="date" id="data" name="data" required />
+
+        <button type="submit">Confirmar Agendamento</button>
+      </form>
+    </div>
+  </div>
+
   <div class="carrinho" id="carrinho">
     <button class="fechar-carrinho" onclick="fecharCarrinho()">X</button>
     <h3>Seu Carrinho</h3>
@@ -114,8 +142,7 @@
     <button onclick="finalizarCompra()">Agende agora</button>
   </div>
 
-
-<!-- Tentar colocar a parte de agendamento no carrinho, e apareça o formulário no carrinho -->
+  <!-- Tentar colocar a parte de agendamento no carrinho, e apareça o formulário no carrinho -->
 
   <script src="../pages/script/script.js"></script>
 </section>
