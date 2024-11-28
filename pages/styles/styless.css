@@ -471,9 +471,24 @@ button.next {
   margin-top: 10px;
 }
 
-.carrinho button {
-  display: block;
+.fechar-carrinho {
+  position: absolute;
 
+  top: 5px;
+  right: 5px;
+
+  font-size: 20px;
+  font-weight: bold;
+
+  background-color: transparent;
+  color: #e63946;
+
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.agendar-carrinho {
   width: 80%;
   padding: 10px;
 
@@ -488,26 +503,12 @@ button.next {
   font-size: 16px;
 }
 
-.carrinho button:hover {
-  background-color: #c5303b;
-}
-
-.fechar-carrinho {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-
-  background-color: transparent;
-  color: #e63946;
-
-  font-size: 20px;
-  border: none;
-  cursor: pointer;
-  font-weight: bold;
-}
-
 .fechar-carrinho:hover {
   color: #c5303b;
+}
+
+.agendar-carrinho:hover {
+  background-color: #c5303b;
 }
 
 @media (max-width: 768px) {

@@ -117,9 +117,17 @@
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required />
 
-        <label for="data">Data desejada:</label>
+        <label for="data">Data Desejado:</label>
         <input type="date" id="data" name="data" required />
 
+        <label for="">Horários Desejado:</label>
+        <input type="time" id="time" name="time" required />
+        <!-- Acidionar os Horários escolhidos por joelma: EXPL: 08:00 / 08:40 / 09:30 
+
+        Quando uma cliente escolher o horário, outra cliente não pode escolher na mesma hora 
+        
+        Dependendo do procedimento que a cliente escolher, tem que ter um horário diferente, EXPL: Corte precisa só de 40min, HIdratação precisa de 50min
+        Dependendo do horário ja deve aparecer na hora que a cliente for escolher o horário -->
         <button type="submit">Confirmar Agendamento</button>
       </form>
     </div>
@@ -132,7 +140,7 @@
     <div class="carrinho-total">
       Total: <span id="total-carrinho">R$0</span>
     </div>
-    <button onclick="finalizarCompra()">Agende agora</button>
+    <button onclick="finalizarCompra()" class="agendar-carrinho">Agende agora</button>
   </div>
 
   <script src="../pages/script/script.js"></script>
