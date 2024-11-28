@@ -133,9 +133,15 @@ let carrinho = [];
 let total = 0;
 
 function adicionarAoCarrinho(nome, preco) {
-  carrinho.push({ nome, preco });
-  total += preco;
+  const itemExistente = carrinho.find((item) => item.nome === nome);
 
+  if (itemExistente) {
+    itemExistente.quantidade++;
+  } else {
+    carrinho.push({ nome, preco, quantidade: 1 });
+  }
+
+  total += preco;
   atualizarCarrinho();
 }
 
@@ -146,26 +152,40 @@ function atualizarCarrinho() {
 
   carrinhoElemento.innerHTML = "";
 
-  carrinho.forEach((item) => {
+  carrinho.forEach((item, index) => {
     const li = document.createElement("li");
 
-    li.textContent = `${item.nome} - R$${item.preco.toFixed(2)}`;
+    li.textContent = `${item.nome} - R$${item.preco.toFixed(2)} x ${
+      item.quantidade
+    }`;
 
-    const botaoRemover = document.createElement("button");
-    botaoRemover.textContent = "Remover";
-    botaoRemover.onclick = () => removerDoCarrinho(index);
+    const botaoAumentar = document.createElement("button");
+    botaoAumentar.textContent = "+";
+    botaoAumentar.onclick = () => adicionarAoCarrinho(item.nome, item.preco);
 
-    li.appendChild(botaoRemover);
+    const botaoDiminuir = document.createElement("button");
+    botaoDiminuir.textContent = "-";
+    botaoDiminuir.onclick = () => removerDoCarrinho(index);
+
+    li.appendChild(botaoAumentar);
+    li.appendChild(botaoDiminuir);
     carrinhoElemento.appendChild(li);
   });
 
   totalElemento.textContent = `R$${total.toFixed(2)}`;
-  carrinhoConteiner.style.display = "block";
+  carrinhoConteiner.style.display = carrinho.length > 0 ? "block" : "none";
 }
 
 function removerDoCarrinho(index) {
-  total -= carrinho[index].preco;
-  carrinho.splice(index, 1);
+  const item = carrinho[index];
+
+  if (item.quantidade > 1) {
+    item.quantidade--;
+    total -= item.preco;
+  } else {
+    total -= item.preco;
+    carrinho.splice(index, 1);
+  }
 
   atualizarCarrinho();
 
@@ -184,8 +204,6 @@ function finalizarCompra() {
   carrinho = [];
   total = 0;
   atualizarCarrinho();
-
-  document.getElementById("carrinho").style.display = "none";
 }
 
 function fecharCarrinho() {

@@ -406,6 +406,8 @@ button.next {
 
   font-weight: bold;
 
+  text-align: center;
+
   color: #333;
 }
 
@@ -424,6 +426,25 @@ button.next {
   margin-bottom: 10px;
 
   font-size: 16px;
+}
+
+.carrinho li button {
+  background-color: #e63946;
+  color: white;
+
+  padding: 5px 10px;
+  margin-left: 10px;
+
+  border: none;
+  border-radius: 4px;
+
+  cursor: pointer;
+
+  font-size: 14px;
+}
+
+.carrinho li button:hover {
+  background-color: #c5303b;
 }
 
 .carrinho-total {
@@ -456,39 +477,28 @@ button.next {
   background-color: #c5303b;
 }
 
-.carrinho li button {
-  background-color: #e63946;
-  color: white;
-
-  border: none;
-  border-radius: 4px;
-
-  cursor: pointer;
-
-  font-size: 14px;
-  padding: 5px 10px;
-}
-
-.carrinho li button:hover {
-  background-color: #c5303b;
-}
-
 .fechar-carrinho {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 5px;
+  right: 5px;
 
   background-color: transparent;
   color: #e63946;
 
-  border: none;
   font-size: 20px;
-
+  border: none;
   cursor: pointer;
+  font-weight: bold;
 }
 
 .fechar-carrinho:hover {
   color: #c5303b;
+}
+
+.carrinho li span {
+  flex-grow: 1;
+
+  text-align: left;
 }
 
 @media (max-width: 768px) {
